@@ -55,31 +55,6 @@
             100% { box-shadow: 0 0 0 0 rgba(30, 64, 175, 0); }
         }
 
-        .whatsapp-balloon {
-            position: relative;
-            background: #dcf8c6;
-            border-radius: 18px;
-            border-top-left-radius: 4px;
-            padding: 16px;
-            color: #111b21;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-            display: inline-block;
-            text-align: left;
-            margin-left: 12px;
-            max-width: 90%;
-        }
-
-        .whatsapp-balloon::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: -10px;
-            width: 0;
-            height: 0;
-            border-top: 12px solid #dcf8c6;
-            border-left: 12px solid transparent;
-        }
-
         details > summary { list-style: none; }
         details > summary::-webkit-details-marker { display: none; }
         
@@ -312,7 +287,7 @@
                     <p class="text-xs font-bold text-slate-500 uppercase">Capa do Manual</p>
                 </div>
                 
-                <div class="flex flex-col gap-2 hidden md:flex">
+                <div class="flex flex-col gap-2">
                     <div class="bg-slate-100 rounded-xl aspect-[3/4] overflow-hidden border border-slate-200 relative">
                         <img src="pagina-aps360-1.jpg" alt="Página Interna 1" class="w-full h-full object-cover" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNlMmU4ZjAiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSJib2xkIiBmb250LXNpemU9IjE2IiBmaWxsPSIjOTRhM2I4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIj5Db250ZcO6ZG8gT3JnYW5pemFkbzwvdGV4dD48L3N2Zz4='">
                     </div>
@@ -335,26 +310,9 @@
                 Quem viu a lógica, entendeu o risco.
             </h2>
 
-            <div class="bg-slate-100 p-2 rounded-2xl border border-slate-200 mb-6 overflow-hidden">
+            <div class="bg-slate-100 p-2 rounded-2xl border border-slate-200 overflow-hidden">
                 <img src="prova-aps-01.jpg" alt="Prova Social" class="w-full h-auto rounded-xl" onerror="this.style.display='none'">
             </div>
-
-            <div class="bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjZTJlOGYwIj48L3JlY3Q+Cjwvc3ZnPg==')] bg-repeat p-6 rounded-3xl border border-slate-200 mb-6 relative overflow-hidden">
-                
-                <div class="whatsapp-balloon mb-4">
-                    <p class="text-[14px] font-medium leading-snug">Terminei de ler o manual. Agora entendi por que minhas visitas do mês passado não contaram direito. Eu tava errando na leitura da janela.</p>
-                    <span class="text-[10px] text-gray-500 float-right mt-1 ml-4">09:15</span>
-                </div>
-
-                <div class="whatsapp-balloon bg-white border border-slate-100 float-right" style="margin-left: 0; margin-right: 12px; border-top-left-radius: 18px; border-top-right-radius: 4px;">
-                    <style>.whatsapp-balloon.bg-white::before { display: none; }</style>
-                    <p class="text-[14px] font-medium leading-snug">Exatamente. É regra matemática, não esforço. Foca no que o sistema pede agora.</p>
-                    <span class="text-[10px] text-gray-500 float-right mt-1 ml-4 text-blue-500">✓✓</span>
-                </div>
-                <div class="clear-both"></div>
-            </div>
-            
-            <p class="text-xs text-slate-400 font-bold uppercase tracking-widest mt-4">Mensagens reais de quem aplica a regra.</p>
         </div>
     </section>
 
