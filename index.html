@@ -423,5 +423,86 @@
         </a>
     </div>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // 🟢 1. Repasse de UTMs apenas para links da Hotmart
+            const urlParams = window.location.search;
+            if (urlParams) {
+                const hotmartLinks = document.querySelectorAll('a[href*="pay.hotmart.com"]');
+                hotmartLinks.forEach(link => {
+                    const hasQuestionMark = link.href.includes('?');
+                    // Se o link já tiver '?' usamos '&' para adicionar, senão usamos '?'
+                    const appendParams = urlParams.replace('?', hasQuestionMark ? '&' : '?');
+                    link.href = link.href + appendParams;
+                });
+            }
+
+            // 🟢 2. Rastreamento Específico de Cada Botão
+            const ctas = document.querySelectorAll('.cta-button');
+            ctas.forEach(cta => {
+                cta.addEventListener('click', function() {
+                    let posicao = 'desconhecida';
+                    let isCheckout = this.href.includes('hotmart.com');
+                    
+                    if (this.closest('header')) {
+                        posicao = 'topo_ancora'; // Botão que rola para a oferta
+                    } else if (this.closest('#oferta')) {
+                        posicao = 'oferta_final'; // Botão da Hotmart
+                    } else if (this.closest('.mobile-cta-bar')) {
+                        posicao = 'barra_mobile_fixa'; // Botão da Hotmart
+                    }
+                    
+                    if (isCheckout) {
+                        // Envia evento padrão de e-commerce se for para a Hotmart
+                        gtag('event', 'begin_checkout', {
+                            'posicao': posicao,
+                            'value': 29.90, // Valor ajustado para o APS 360
+                            'currency': 'BRL',
+                            'items': [{
+                                'item_id': 'manual_aps_360',
+                                'item_name': 'Manual APS 360'
+                            }]
+                        });
+                    } else {
+                        // Envia evento de rolagem se a pessoa apenas clicou na âncora do topo
+                        gtag('event', 'click_scroll_oferta', {
+                            'posicao': posicao
+                        });
+                    }
+                });
+            });
+
+            // 🟢 3. Rastreamento de Abertura de FAQ (Objeções)
+            const faqs = document.querySelectorAll('details');
+            faqs.forEach(faq => {
+                faq.addEventListener('toggle', function() {
+                    if (this.open) {
+                        const questionText = this.querySelector('summary').innerText.replace('+', '').trim();
+                        gtag('event', 'faq_open', {
+                            'pergunta': questionText
+                        });
+                    }
+                });
+            });
+
+            // 🟢 4. Rastreamento de Chegada na Oferta (Scroll Profundo)
+            const ofertaSection = document.getElementById('oferta');
+            if (ofertaSection && 'IntersectionObserver' in window) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            gtag('event', 'view_promotion', {
+                                'secao': 'oferta_final'
+                            });
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.3 }); 
+                
+                observer.observe(ofertaSection);
+            }
+        });
+    </script>
 </body>
 </html>
