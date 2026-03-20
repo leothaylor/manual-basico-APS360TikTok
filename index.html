@@ -19,7 +19,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Manual APS 360 - Entenda a Regra</title>
+    <title>Manual APS 360 | Entenda a regra da APS 360 com mais clareza</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,9 +35,9 @@
                     },
                     colors: {
                         aps: {
-                            blue: '#1e40af',
+                            blue: '#1e3a8a',
                             dark: '#0f172a',
-                            light: '#eff6ff',
+                            light: '#f1f5f9',
                             bg: '#f8fafc',
                             muted: '#475569',
                             danger: '#ef4444',
@@ -58,22 +58,26 @@
 
         .cta-button {
             transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        .cta-button:active { transform: scale(0.98); }
-
-        .pulse-subtle {
-            animation: pulse-border 2s infinite;
+            animation: pulse-subtle 2s infinite;
         }
 
-        @keyframes pulse-border {
-            0% { box-shadow: 0 0 0 0 rgba(30, 64, 175, 0.4); }
-            70% { box-shadow: 0 0 0 8px rgba(30, 64, 175, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(30, 64, 175, 0); }
+        .cta-button:active {
+            transform: scale(0.98);
         }
 
-        details > summary { list-style: none; }
-        details > summary::-webkit-details-marker { display: none; }
-        
+        @keyframes pulse-subtle {
+            0% { box-shadow: 0 0 0 0 rgba(30, 58, 138, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(30, 58, 138, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(30, 58, 138, 0); }
+        }
+
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+
         /* Sticky Mobile CTA */
         .mobile-cta-bar {
             position: fixed;
@@ -112,145 +116,67 @@
         </div>
     </nav>
 
-    <header class="pt-12 pb-16 px-5 bg-white border-b border-slate-100">
+    <header class="pt-12 pb-16 px-5 bg-white border-b border-slate-200">
         <div class="max-w-md mx-auto md:max-w-2xl text-center">
-            
-            <div class="inline-block bg-blue-50 border border-blue-100 text-aps-blue font-bold text-[10px] px-3 py-1 rounded-full uppercase tracking-widest mb-6">
-                Material em PDF • Acesso Imediato
-            </div>
-
             <h1 class="text-4xl md:text-5xl font-black text-aps-dark leading-[1.1] tracking-tight mb-5">
                 O problema não é visitar.<br>
-                <span class="text-aps-danger">É visitar e não validar.</span>
+                <span class="text-aps-danger">É visitar e não entender por que a produção não contou.</span>
             </h1>
             
-            <p class="text-[17px] text-aps-muted font-medium mb-8 leading-relaxed">
-                Um manual direto para entender a janela móvel, o vínculo, a validação e o que exatamente faz a sua produção não contar.
+            <p class="text-lg text-aps-muted font-medium mb-8 leading-relaxed">
+                O Manual APS 360 é um material técnico em PDF para entender a lógica da janela móvel, do vínculo, do cadastro validado e dos critérios que fazem a produção contar ou não no sistema.
             </p>
 
-            <ul class="text-left space-y-3 mb-8 bg-slate-50 p-6 rounded-2xl border border-slate-200">
+            <ul class="text-left space-y-3 mb-8 bg-aps-light p-6 rounded-2xl border border-slate-200">
                 <li class="flex items-start gap-3">
-                    <span class="text-aps-danger text-lg mt-0.5 font-black">🔴</span>
-                    <span class="font-semibold text-slate-700 text-sm">Visitas feitas fora da janela não contam.</span>
+                    <span class="text-aps-blue text-xl leading-none mt-0.5">🟢</span>
+                    <span class="font-semibold text-slate-700">Ajuda a entender como funciona a janela móvel</span>
                 </li>
                 <li class="flex items-start gap-3">
-                    <span class="text-aps-danger text-lg mt-0.5 font-black">🔴</span>
-                    <span class="font-semibold text-slate-700 text-sm">Produção sem vínculo ativo é ignorada pelo sistema.</span>
+                    <span class="text-aps-blue text-xl leading-none mt-0.5">🟢</span>
+                    <span class="font-semibold text-slate-700">Explica a diferença entre cadastro, vínculo e acompanhamento</span>
                 </li>
                 <li class="flex items-start gap-3">
-                    <span class="text-aps-danger text-lg mt-0.5 font-black">🔴</span>
-                    <span class="font-semibold text-slate-700 text-sm">Cadastros inconsistentes zeram o seu repasse.</span>
+                    <span class="text-aps-blue text-xl leading-none mt-0.5">🟢</span>
+                    <span class="font-semibold text-slate-700">Mostra por que uma produção pode não entrar como você imagina</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="text-aps-blue text-xl leading-none mt-0.5">🟢</span>
+                    <span class="font-semibold text-slate-700">Dá clareza técnica sobre o que realmente impacta a pontuação</span>
                 </li>
             </ul>
 
-            <div class="bg-blue-50 rounded-xl p-4 mb-8 text-left border border-blue-100 flex gap-3 items-center">
-                <span class="text-2xl">📘</span>
-                <div>
-                    <p class="text-xs font-black text-aps-blue uppercase tracking-widest">O que é este material?</p>
-                    <p class="text-sm text-slate-600 font-medium">Um PDF prático (não é curso) para ler rápido e aplicar na rua hoje mesmo.</p>
-                </div>
-            </div>
+            <p class="text-sm text-slate-600 font-semibold mb-6 bg-slate-100 p-3 rounded-xl border border-slate-200">
+                Não é curso. Não é ferramenta de campo. É manual técnico de leitura direta para entender a regra.
+            </p>
 
-            <a href="#oferta" class="cta-button pulse-subtle block w-full bg-aps-blue text-white font-black text-lg py-5 px-8 rounded-2xl shadow-xl shadow-blue-900/20 uppercase tracking-wide">
-                QUERO ENTENDER A REGRA
+            <a href="https://pay.hotmart.com/C104598275Q?checkoutMode=10" class="cta-button block w-full bg-aps-blue text-white font-black text-lg py-5 px-8 rounded-2xl shadow-lg shadow-blue-900/30 uppercase tracking-wide">
+                Baixar meu Manual agora – R$ 29,90
             </a>
-            <p class="text-[11px] text-slate-400 mt-4 font-bold uppercase tracking-wider">Acesso imediato • R$ 29,90</p>
+            <p class="text-xs text-slate-400 mt-4 font-medium uppercase tracking-wider">Acesso imediato • PDF pronto para ler • Compra segura</p>
         </div>
     </header>
 
-    <section class="py-16 px-5 bg-aps-bg">
-        <div class="max-w-md mx-auto md:max-w-2xl text-center">
-            <h2 class="text-2xl md:text-3xl font-black text-aps-dark mb-6 tracking-tight">
-                Você pode estar trabalhando duro e mesmo assim <span class="text-aps-danger underline decoration-red-200">perdendo ponto.</span>
+    <section class="py-12 px-5 bg-aps-dark text-white">
+        <div class="max-w-md mx-auto md:max-w-2xl">
+            <h2 class="text-2xl font-black mb-8 tracking-tight text-center text-white">
+                O que este material é — e o que ele não é
             </h2>
             
-            <p class="text-[16px] text-aps-muted font-medium leading-relaxed mb-6 text-left">
-                No novo modelo, o sistema não mede o seu esforço físico no sol quente. <strong>Ele mede regra.</strong>
-            </p>
-
-            <p class="text-[16px] text-aps-muted font-medium leading-relaxed mb-8 text-left">
-                Se você não souber como a contagem matemática funciona, você continuará entregando produção que o sistema automaticamente descarta na hora da validação. Não é falta de trabalho. <strong>É erro de leitura operacional.</strong>
-            </p>
-
-            <div class="bg-white border-l-4 border-aps-blue p-5 rounded-r-xl shadow-sm text-left">
-                <p class="font-bold text-slate-800 text-sm italic">
-                    "Eu visito, eu registro, mas a nota da equipe cai."
-                </p>
-                <p class="text-xs text-slate-500 mt-2">
-                    Isso acontece porque a sua visita não atendeu aos critérios técnicos obrigatórios invisíveis do sistema.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-16 px-5 bg-white border-y border-slate-100">
-        <div class="max-w-md mx-auto md:max-w-2xl">
-            <div class="text-center mb-10">
-                <span class="text-xs font-black text-aps-danger uppercase tracking-widest">Fique Alerta</span>
-                <h2 class="text-2xl font-black text-aps-dark tracking-tight mt-2">
-                    3 situações que fazem o seu trabalho <br>NÃO CONTAR:
-                </h2>
-            </div>
-
-            <div class="space-y-4">
-                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
-                    <div class="flex items-center gap-3 mb-2">
-                        <div class="bg-red-100 text-aps-danger font-black w-8 h-8 rounded-full flex items-center justify-center shrink-0">1</div>
-                        <h3 class="font-black text-slate-800 text-lg">Visita fora da Janela Móvel</h3>
-                    </div>
-                    <p class="text-sm text-slate-600 ml-11">
-                        O sistema exige um tempo certo para retornar. Se você for antes da hora ou depois do prazo, o registro vira apenas uma anotação, mas não valida repasse.
+            <div class="space-y-6">
+                <div class="bg-white/10 p-6 rounded-2xl border border-white/20">
+                    <p class="text-base font-medium leading-relaxed">
+                        É um manual técnico em PDF focado em explicar a lógica da APS 360.<br>
+                        Serve para dar clareza sobre janela móvel, vínculo, cadastro validado, acompanhamento e critérios que influenciam a pontuação.
                     </p>
                 </div>
-
-                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
-                    <div class="flex items-center gap-3 mb-2">
-                        <div class="bg-red-100 text-aps-danger font-black w-8 h-8 rounded-full flex items-center justify-center shrink-0">2</div>
-                        <h3 class="font-black text-slate-800 text-lg">Cadastro Desatualizado</h3>
-                    </div>
-                    <p class="text-sm text-slate-600 ml-11">
-                        Cidadão sem CPF ou CNS válido, ou com informações conflitantes. Você atende, você lança, mas na hora do cálculo, aquela pessoa "não existe" para a meta.
+                
+                <div class="bg-white/10 p-6 rounded-2xl border border-white/20">
+                    <p class="text-base font-medium leading-relaxed text-slate-300">
+                        Não é curso longo.<br>
+                        Não substitui sistema, coordenação ou documento oficial.<br>
+                        É material de leitura direta para ajudar você a entender melhor a regra e reduzir erro de interpretação.
                     </p>
-                </div>
-
-                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
-                    <div class="flex items-center gap-3 mb-2">
-                        <div class="bg-red-100 text-aps-danger font-black w-8 h-8 rounded-full flex items-center justify-center shrink-0">3</div>
-                        <h3 class="font-black text-slate-800 text-lg">Produção sem Vínculo</h3>
-                    </div>
-                    <p class="text-sm text-slate-600 ml-11">
-                        Atender quem não está devidamente vinculado à equipe no território. O procedimento é registrado, o esforço é feito, mas não impacta a nota da APS 360.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-16 px-5 bg-aps-dark text-white">
-        <div class="max-w-md mx-auto md:max-w-2xl text-center">
-            <h2 class="text-2xl font-black mb-10 tracking-tight">
-                Alinhamento de Expectativa
-            </h2>
-
-            <div class="grid grid-cols-2 gap-4 text-left">
-                <div class="bg-slate-800 p-5 rounded-2xl border border-slate-700">
-                    <div class="text-aps-success text-2xl mb-2 font-black">🟢 É</div>
-                    <ul class="space-y-3 mt-4">
-                        <li class="text-sm text-slate-300 font-medium leading-tight">Um manual prático em PDF.</li>
-                        <li class="text-sm text-slate-300 font-medium leading-tight">Leitura direta e operacional.</li>
-                        <li class="text-sm text-slate-300 font-medium leading-tight">Material focado na regra e no cálculo.</li>
-                        <li class="text-sm text-slate-300 font-medium leading-tight">Feito para ACS e TACS usarem no dia a dia.</li>
-                    </ul>
-                </div>
-
-                <div class="bg-slate-800 p-5 rounded-2xl border border-slate-700 opacity-80">
-                    <div class="text-aps-danger text-2xl mb-2 font-black">🔴 NÃO É</div>
-                    <ul class="space-y-3 mt-4">
-                        <li class="text-sm text-slate-400 font-medium leading-tight">Um curso em vídeo de 40 horas.</li>
-                        <li class="text-sm text-slate-400 font-medium leading-tight">Teoria acadêmica ou institucional.</li>
-                        <li class="text-sm text-slate-400 font-medium leading-tight">Substituto do sistema de saúde (e-SUS).</li>
-                        <li class="text-sm text-slate-400 font-medium leading-tight">Promessa mágica de trabalho fácil.</li>
-                    </ul>
                 </div>
             </div>
         </div>
@@ -259,83 +185,157 @@
     <section class="py-16 px-5 bg-aps-bg">
         <div class="max-w-md mx-auto md:max-w-2xl">
             <h2 class="text-2xl md:text-3xl font-black text-aps-dark mb-8 tracking-tight text-center">
-                O que você encontra lá dentro:
+                Quando a regra não está clara, o <span class="text-aps-danger">problema aparece no resultado</span>
             </h2>
 
-            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-                <ul class="space-y-4">
-                    <li class="flex items-start gap-3">
-                        <span class="text-aps-blue font-black mt-0.5">→</span>
-                        <span class="text-sm font-semibold text-slate-700">Como funciona a matemática da Janela Móvel.</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-aps-blue font-black mt-0.5">→</span>
-                        <span class="text-sm font-semibold text-slate-700">Onde a sua pontuação cai mesmo trabalhando todo dia.</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-aps-blue font-black mt-0.5">→</span>
-                        <span class="text-sm font-semibold text-slate-700">O que é um Vínculo Válido para o sistema.</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-aps-blue font-black mt-0.5">→</span>
-                        <span class="text-sm font-semibold text-slate-700">A lista exata do que pode invalidar a sua produção.</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-aps-blue font-black mt-0.5">→</span>
-                        <span class="text-sm font-semibold text-slate-700">Como parar de trabalhar no escuro e focar no que dá resultado.</span>
-                    </li>
-                </ul>
+            <div class="space-y-4 mb-8">
+                <div class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm border border-slate-100">
+                    <div class="w-10 h-10 shrink-0 bg-red-50 rounded-full flex items-center justify-center text-aps-danger text-xl font-bold">🔴</div>
+                    <p class="font-semibold text-slate-700">Faz a visita sem entender se ela está dentro do critério exigido</p>
+                </div>
+                <div class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm border border-slate-100">
+                    <div class="w-10 h-10 shrink-0 bg-red-50 rounded-full flex items-center justify-center text-aps-danger text-xl font-bold">🔴</div>
+                    <p class="font-semibold text-slate-700">Confunde cadastro com acompanhamento e interpreta o resultado errado</p>
+                </div>
+                <div class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm border border-slate-100">
+                    <div class="w-10 h-10 shrink-0 bg-red-50 rounded-full flex items-center justify-center text-aps-danger text-xl font-bold">🔴</div>
+                    <p class="font-semibold text-slate-700">Registra produção sem entender o peso do vínculo válido</p>
+                </div>
+                <div class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm border border-slate-100">
+                    <div class="w-10 h-10 shrink-0 bg-red-50 rounded-full flex items-center justify-center text-aps-danger text-xl font-bold">🔴</div>
+                    <p class="font-semibold text-slate-700">Trabalha no território, mas não entende por que a pontuação não veio como esperado</p>
+                </div>
+            </div>
+
+            <p class="text-center text-aps-muted font-medium bg-slate-200/50 p-4 rounded-xl">
+                O problema nem sempre é falta de trabalho. Muitas vezes é falta de clareza sobre a lógica que o sistema usa para validar a produção.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-16 px-5 bg-white border-y border-slate-100">
+        <div class="max-w-md mx-auto md:max-w-2xl text-center">
+            <span class="inline-block bg-slate-100 text-aps-dark font-bold text-xs px-3 py-1 rounded-full uppercase tracking-widest mb-4">Leitura técnica direta</span>
+            <h2 class="text-3xl font-black text-aps-dark mb-4 tracking-tight">
+                Um guia básico para entender melhor a lógica da APS 360
+            </h2>
+            
+            <p class="text-lg text-aps-muted font-medium mb-10">
+                O Manual organiza os principais pontos da regra para ajudar você a entender como funcionam janela móvel, vínculo, cadastro validado, visitas válidas e cálculo por pontos.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+                <div class="bg-aps-light p-5 rounded-2xl border border-slate-200">
+                    <h3 class="font-bold text-aps-dark mb-1">Janela móvel explicada</h3>
+                    <p class="text-sm text-aps-muted">Entenda como o prazo interfere na validade do acompanhamento.</p>
+                </div>
+                <div class="bg-aps-light p-5 rounded-2xl border border-slate-200">
+                    <h3 class="font-bold text-aps-dark mb-1">Cadastro e vínculo</h3>
+                    <p class="text-sm text-aps-muted">Veja onde cadastro ativo e vínculo válido entram na lógica do sistema.</p>
+                </div>
+                <div class="bg-aps-light p-5 rounded-2xl border border-slate-200">
+                    <h3 class="font-bold text-aps-dark mb-1">Visita que conta</h3>
+                    <p class="text-sm text-aps-muted">Entenda os critérios que diferenciam visita registrada de visita válida para pontuação.</p>
+                </div>
+                <div class="bg-aps-light p-5 rounded-2xl border border-slate-200">
+                    <h3 class="font-bold text-aps-dark mb-1">Papel do ACS</h3>
+                    <p class="text-sm text-aps-muted">Saiba onde o ACS impacta o resultado e onde o desfecho não depende só dele.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="py-16 px-5 bg-white border-t border-slate-100">
+    <section class="py-16 px-5 bg-aps-bg">
         <div class="max-w-md mx-auto md:max-w-4xl text-center">
-            <h2 class="text-2xl font-black text-aps-dark mb-10 tracking-tight">
-                Um material concreto e estruturado
+            <h2 class="text-3xl font-black text-aps-dark mb-2 tracking-tight">
+                O que você recebe no Manual
             </h2>
+            <p class="text-aps-muted font-medium mb-12">
+                Material em PDF com explicação direta e organizada sobre a lógica da APS 360.
+            </p>
 
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="flex flex-col gap-2">
-                    <div class="bg-slate-100 rounded-xl aspect-[3/4] overflow-hidden border border-slate-200 relative">
-                        <img src="capa-aps360.jpg" alt="Capa do Manual APS 360" class="w-full h-full object-cover" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNlMmU4ZjAiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSJib2xkIiBmb250LXNpemU9IjE2IiBmaWxsPSIjOTRhM2I4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIj5DQVBBIFBERjwvdGV4dD48L3N2Zz4='">
-                    </div>
-                    <p class="text-xs font-bold text-slate-500 uppercase">Capa do Manual</p>
-                </div>
-                
-                <div class="flex flex-col gap-2">
-                    <div class="bg-slate-100 rounded-xl aspect-[3/4] overflow-hidden border border-slate-200 relative">
-                        <img src="pagina-aps360-1.jpg" alt="Página Interna 1" class="w-full h-full object-cover" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNlMmU4ZjAiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSJib2xkIiBmb250LXNpemU9IjE2IiBmaWxsPSIjOTRhM2I4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIj5Db250ZcO6ZG8gT3JnYW5pemFkbzwvdGV4dD48L3N2Zz4='">
-                    </div>
-                    <p class="text-xs font-bold text-slate-500 uppercase">Leitura Direta</p>
+            <div class="grid md:grid-cols-2 gap-6 text-left">
+                <div class="bg-white rounded-3xl p-6 shadow-sm border border-slate-200 flex flex-col h-full">
+                    <h3 class="font-black text-xl text-aps-dark mb-2">Janela móvel</h3>
+                    <p class="text-sm text-aps-muted">Explicação objetiva sobre como o prazo interfere na validade do acompanhamento e da pontuação.</p>
                 </div>
 
-                <div class="flex flex-col gap-2">
-                    <div class="bg-slate-100 rounded-xl aspect-[3/4] overflow-hidden border border-slate-200 relative">
-                        <img src="pagina-aps360-2.jpg" alt="Página Interna 2" class="w-full h-full object-cover" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNlMmU4ZjAiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSJib2xkIiBmb250LXNpemU9IjE2IiBmaWxsPSIjOTRhM2I4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIj5DaGVja2xpc3QgZGUgUmVncmFzPC90ZXh0Pjwvc3ZnPg=='">
-                    </div>
-                    <p class="text-xs font-bold text-slate-500 uppercase">Regras Claras</p>
+                <div class="bg-white rounded-3xl p-6 shadow-sm border border-slate-200 flex flex-col h-full">
+                    <h3 class="font-black text-xl text-aps-dark mb-2">Cadastro, vínculo e acompanhamento</h3>
+                    <p class="text-sm text-aps-muted">Entenda a diferença entre esses elementos e como eles entram na leitura do sistema.</p>
+                </div>
+
+                <div class="bg-white rounded-3xl p-6 shadow-sm border border-slate-200 flex flex-col h-full">
+                    <h3 class="font-black text-xl text-aps-dark mb-2">Regras que influenciam a validação</h3>
+                    <p class="text-sm text-aps-muted">Veja os principais critérios que fazem uma produção contar ou não como você imagina.</p>
+                </div>
+
+                <div class="bg-white rounded-3xl p-6 shadow-sm border border-slate-200 flex flex-col h-full">
+                    <h3 class="font-black text-xl text-aps-dark mb-2">Papel do ACS na pontuação</h3>
+                    <p class="text-sm text-aps-muted">Entenda onde o ACS impacta o resultado e onde a lógica depende de outros componentes do indicador.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-16 px-5 bg-aps-bg border-y border-slate-200">
+    <section class="py-16 px-5 bg-white border-t border-slate-200">
+        <div class="max-w-md mx-auto md:max-w-4xl text-center">
+            <h2 class="text-3xl font-black text-aps-dark mb-4 tracking-tight">
+                Veja o material por dentro
+            </h2>
+            <p class="text-lg text-aps-muted font-medium mb-10">
+                Abaixo, você visualiza como o conteúdo é organizado dentro do Manual APS 360.
+            </p>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div>
+                    <div class="bg-slate-100 rounded-xl aspect-[3/4] overflow-hidden border border-slate-200 mb-2">
+                        <img src="capa-aps360.jpg" alt="Capa do Manual" class="w-full h-full object-cover" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNlMmU4ZjAiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiM5NGEzYjgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiPkNhcGEgZG8gTWFudWFsPC90ZXh0Pjwvc3ZnPg=='">
+                    </div>
+                    <p class="text-[13px] font-bold text-aps-dark">Capa do manual</p>
+                </div>
+                <div>
+                    <div class="bg-slate-100 rounded-xl aspect-[3/4] overflow-hidden border border-slate-200 mb-2">
+                        <img src="pagina-aps360-1.jpg" alt="Janela móvel e lógica" class="w-full h-full object-cover" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNlMmU4ZjAiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiM5NGEzYjgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiPkphbmVsYSBlIEzDs2dpY2E8L3RleHQ+PC9zdmc+'">
+                    </div>
+                    <p class="text-[13px] font-bold text-aps-dark">Janela móvel e lógica</p>
+                </div>
+                <div>
+                    <div class="bg-slate-100 rounded-xl aspect-[3/4] overflow-hidden border border-slate-200 mb-2">
+                         <img src="pagina-aps360-2.jpg" alt="Regras de validação" class="w-full h-full object-cover" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNlMmU4ZjAiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiM5NGEzYjgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiPlJlZ3JhcyBkZSBWYWxpZGFjw6NvPC90ZXh0Pjwvc3ZnPg=='">
+                    </div>
+                    <p class="text-[13px] font-bold text-aps-dark">Regras de validação</p>
+                </div>
+                <div>
+                    <div class="bg-slate-100 rounded-xl aspect-[3/4] overflow-hidden border border-slate-200 mb-2">
+                        <img src="pagina-aps360-3.jpg" alt="Estrutura do conteúdo" class="w-full h-full object-cover" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNlMmU4ZjAiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiM5NGEzYjgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiPkVzdHJ1dHVyYTwvdGV4dD48L3N2Zz4='">
+                    </div>
+                    <p class="text-[13px] font-bold text-aps-dark">Estrutura do conteúdo</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 px-5 bg-aps-bg border-y border-slate-100 overflow-hidden">
         <div class="max-w-md mx-auto text-center">
-            <h2 class="text-2xl font-black text-aps-dark mb-10 tracking-tight">
-                Quem viu a lógica, entendeu o risco.
+            <h2 class="text-3xl font-black text-aps-dark mb-10 tracking-tight">
+                Quem lê, entende melhor a lógica
             </h2>
 
-            <div class="bg-slate-100 p-2 rounded-2xl border border-slate-200 overflow-hidden">
-                <img src="prova-aps-01.jpg" alt="Prova Social" class="w-full h-auto rounded-xl" onerror="this.style.display='none'">
+            <div class="bg-slate-100 p-2 rounded-2xl border border-slate-200 mb-6 overflow-hidden">
+                <img src="prova-aps-01.jpg" alt="Prova Social - APS 360" class="w-full h-auto rounded-xl" onerror="this.style.display='none'">
             </div>
+
+            <p class="text-sm text-aps-muted font-medium mt-4">
+                Material usado por profissionais que precisavam entender por que a produção registrada não aparecia no resultado como esperavam.
+            </p>
         </div>
     </section>
 
     <section class="py-16 px-5 bg-white">
         <div class="max-w-md mx-auto md:max-w-xl">
-            <h2 class="text-xl font-black text-aps-dark mb-8 tracking-tight text-center uppercase tracking-widest text-slate-400">
-                Perguntas Rápidas
+            <h2 class="text-2xl font-black text-aps-dark mb-8 tracking-tight text-center">
+                Perguntas Frequentes
             </h2>
 
             <div class="space-y-3">
@@ -345,7 +345,7 @@
                         <span class="transition group-open:rotate-180 text-aps-blue text-lg font-black">+</span>
                     </summary>
                     <p class="text-slate-600 mt-3 text-sm leading-relaxed font-medium">
-                        Não. É um manual em PDF. Você baixa, lê rapidamente pelo celular mesmo, e já entende a regra. Sem vídeos longos, sem enrolação.
+                        Não. É um manual técnico em PDF, com leitura direta, feito para ajudar você a entender melhor a lógica da APS 360.
                     </p>
                 </details>
 
@@ -355,7 +355,7 @@
                         <span class="transition group-open:rotate-180 text-aps-blue text-lg font-black">+</span>
                     </summary>
                     <p class="text-slate-600 mt-3 text-sm leading-relaxed font-medium">
-                        Sim. É essencial para qualquer profissional de campo que dependa da validação do sistema para garantir os indicadores e repasses.
+                        Sim. O material ajuda profissionais de campo a entender melhor como cadastro, vínculo, acompanhamento e critérios de validação entram na lógica da APS 360.
                     </p>
                 </details>
 
@@ -365,7 +365,17 @@
                         <span class="transition group-open:rotate-180 text-aps-blue text-lg font-black">+</span>
                     </summary>
                     <p class="text-slate-600 mt-3 text-sm leading-relaxed font-medium">
-                        Absolutamente não. É um material de apoio seu, para te dar clareza técnica e evitar que você cometa erros operacionais na hora de registrar.
+                        Não. É um material de apoio para leitura e entendimento técnico. Não substitui sistema, coordenação nem documentos oficiais.
+                    </p>
+                </details>
+                
+                <details class="group bg-slate-50 rounded-xl border border-slate-200 p-5 cursor-pointer hover:bg-slate-100 transition-colors">
+                    <summary class="flex justify-between items-center font-bold text-slate-800 text-sm">
+                        Ensina a burlar o sistema?
+                        <span class="transition group-open:rotate-180 text-aps-blue text-lg font-black">+</span>
+                    </summary>
+                    <p class="text-slate-600 mt-3 text-sm leading-relaxed font-medium">
+                        Não. O manual apenas traduz a lógica das regras e critérios de validação para reduzir erro de interpretação sobre o que conta ou não no sistema.
                     </p>
                 </details>
 
@@ -375,45 +385,48 @@
                         <span class="transition group-open:rotate-180 text-aps-blue text-lg font-black">+</span>
                     </summary>
                     <p class="text-slate-600 mt-3 text-sm leading-relaxed font-medium">
-                        Após o pagamento seguro via Hotmart, o arquivo PDF é enviado imediatamente para o seu e-mail de cadastro.
+                        Após o pagamento via Hotmart, o arquivo PDF é enviado para o e-mail informado na compra.
                     </p>
                 </details>
             </div>
         </div>
     </section>
 
-    <section id="oferta" class="py-20 px-5 bg-slate-900 text-white rounded-t-[2.5rem] mt-4 text-center">
-        <div class="max-w-md mx-auto">
-            <h2 class="text-3xl md:text-4xl font-black mb-4 tracking-tight leading-tight">
-                Pare de trabalhar no escuro.
-            </h2>
-            
-            <p class="text-[15px] font-medium text-slate-400 mb-10">
-                Um manual direto para entender o que o sistema conta e o que ele ignora na sua produção.
-            </p>
+    <section id="oferta" class="py-20 px-5 bg-slate-900 text-white rounded-t-[2.5rem] mt-4 relative overflow-hidden text-center">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-lg h-64 bg-blue-900/30 blur-[80px] rounded-full pointer-events-none"></div>
 
-            <div class="bg-slate-800 border border-slate-700 rounded-3xl p-8 mb-8">
-                <div class="flex flex-col items-center justify-center mb-6">
-                    <span class="text-slate-500 line-through text-sm font-bold uppercase tracking-widest mb-1">De R$ 39,90</span>
-                    <div class="text-5xl font-black text-white flex items-start justify-center">
-                        <span class="text-2xl mt-1 mr-1">R$</span> 29,90
-                    </div>
+        <div class="max-w-md mx-auto relative z-10">
+            <h2 class="text-3xl md:text-4xl font-black mb-10 tracking-tight leading-tight">
+                Mais clareza sobre a regra. Menos erro de interpretação sobre a produção.
+            </h2>
+
+            <div class="bg-slate-800/80 backdrop-blur-md border border-slate-700 rounded-3xl p-8 mb-8">
+                <div class="flex items-center justify-center gap-3 mb-1">
+                    <span class="text-slate-400 line-through text-lg font-medium">De R$ 39,90</span>
+                </div>
+           
+                <div class="text-5xl font-black text-white mb-6">
+                    <span class="text-2xl font-bold align-top mt-1 inline-block">R$</span> 29,90
                 </div>
 
-                <ul class="text-left space-y-3 mb-8 bg-slate-900 p-4 rounded-xl border border-slate-800">
-                    <li class="flex items-center gap-3 text-sm font-semibold text-slate-300">
-                        <span class="text-aps-success font-black">🟢</span> Acesso Imediato
+                <ul class="text-left space-y-3 mb-8">
+                    <li class="flex items-center gap-3 text-sm font-medium text-slate-200">
+                        <span class="text-aps-success font-black text-lg">🟢</span> Compra segura
                     </li>
-                    <li class="flex items-center gap-3 text-sm font-semibold text-slate-300">
-                        <span class="text-aps-success font-black">🟢</span> PDF Prático e Direto
+                    <li class="flex items-center gap-3 text-sm font-medium text-slate-200">
+                        <span class="text-aps-success font-black text-lg">🟢</span> Acesso imediato
                     </li>
-                    <li class="flex items-center gap-3 text-sm font-semibold text-slate-300">
-                        <span class="text-aps-success font-black">🟢</span> Checkout Seguro (Hotmart)
+                    <li class="flex items-center gap-3 text-sm font-medium text-slate-200">
+                        <span class="text-aps-success font-black text-lg">🟢</span> PDF de leitura direta
                     </li>
                 </ul>
 
-                <a href="https://pay.hotmart.com/C104598275Q" target="_blank" rel="noopener noreferrer" class="cta-button block w-full bg-aps-blue text-white font-black text-lg py-5 px-6 rounded-2xl shadow-lg shadow-blue-900/40 uppercase tracking-wide">
-                    BAIXAR MANUAL APS 360
+                <p class="text-sm text-slate-400 font-medium mb-6">
+                    Para quem quer entender melhor a lógica da APS 360, o Manual está disponível abaixo.
+                </p>
+
+                <a href="https://pay.hotmart.com/C104598275Q?checkoutMode=10" target="_blank" rel="noopener noreferrer" class="cta-button block w-full bg-aps-blue text-white font-black text-lg py-5 px-6 rounded-2xl shadow-lg shadow-blue-900/40 uppercase tracking-wide">
+                    Quero baixar o Manual agora
                 </a>
             </div>
             
@@ -426,7 +439,7 @@
             <p class="text-[10px] font-black uppercase text-slate-500 tracking-widest">Manual em PDF</p>
             <p class="text-lg font-black text-aps-dark">R$ 29,90</p>
         </div>
-        <a href="https://pay.hotmart.com/C104598275Q" target="_blank" rel="noopener noreferrer" class="cta-button bg-aps-blue text-white font-black text-sm py-3 px-6 rounded-xl uppercase tracking-wider shrink-0 shadow-lg shadow-blue-900/20">
+        <a href="https://pay.hotmart.com/C104598275Q?checkoutMode=10" target="_blank" rel="noopener noreferrer" class="cta-button bg-aps-blue text-white font-black text-sm py-3 px-6 rounded-xl uppercase tracking-wider shrink-0 shadow-lg shadow-blue-900/20">
             BAIXAR AGORA
         </a>
     </div>
@@ -454,11 +467,11 @@
                     let isCheckout = this.href.includes('hotmart.com');
                     
                     if (this.closest('header')) {
-                        posicao = 'topo_ancora'; // Botão que rola para a oferta
+                        posicao = 'topo_ancora'; 
                     } else if (this.closest('#oferta')) {
-                        posicao = 'oferta_final'; // Botão da Hotmart
+                        posicao = 'oferta_final'; 
                     } else if (this.closest('.mobile-cta-bar')) {
-                        posicao = 'barra_mobile_fixa'; // Botão da Hotmart
+                        posicao = 'barra_mobile_fixa'; 
                     }
                     
                     if (isCheckout) {
