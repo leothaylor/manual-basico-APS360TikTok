@@ -20,6 +20,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Manual APS 360 | Entenda a regra da APS 360 com mais clareza</title>
+    <meta name="description" content="Manual Básico APS 360 para compreender regras, indicadores e pontuação com linguagem direta.">
+    <link rel="canonical" href="https://aps360.rotinaacs.com.br/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="ROTINA ACS">
+    <meta property="og:title" content="Manual Básico APS 360 | ROTINA ACS">
+    <meta property="og:description" content="Entenda a lógica da APS 360 com mais clareza e leitura técnica direta.">
+    <meta property="og:url" content="https://aps360.rotinaacs.com.br/">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -447,17 +455,29 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             
-            // 🟢 1. Repasse de UTMs apenas para links da Hotmart
-            const urlParams = window.location.search;
-            if (urlParams) {
-                const hotmartLinks = document.querySelectorAll('a[href*="pay.hotmart.com"]');
-                hotmartLinks.forEach(link => {
-                    const hasQuestionMark = link.href.includes('?');
-                    // Se o link já tiver '?' usamos '&' para adicionar, senão usamos '?'
-                    const appendParams = urlParams.replace('?', hasQuestionMark ? '&' : '?');
-                    link.href = link.href + appendParams;
+            // 🟢 1. Repasse seguro de atribuição apenas para links da Hotmart
+            const allowedAttributionParams = [
+                'utm_source',
+                'utm_medium',
+                'utm_campaign',
+                'utm_content',
+                'utm_term',
+                'utm_id',
+                'src',
+                'sck',
+                'fbclid'
+            ];
+            const incomingParams = new URLSearchParams(window.location.search);
+            const hotmartLinks = document.querySelectorAll('a[href*="pay.hotmart.com"]');
+
+            hotmartLinks.forEach(link => {
+                const checkoutUrl = new URL(link.href);
+                allowedAttributionParams.forEach(param => {
+                    const value = incomingParams.get(param);
+                    if (value) checkoutUrl.searchParams.set(param, value);
                 });
-            }
+                link.href = checkoutUrl.toString();
+            });
 
             // 🟢 2. Rastreamento Específico de Cada Botão
             const ctas = document.querySelectorAll('.cta-button');
@@ -478,7 +498,7 @@
                         // Envia evento padrão de e-commerce se for para a Hotmart
                         gtag('event', 'begin_checkout', {
                             'posicao': posicao,
-                            'value': 29.90, // Valor ajustado para o APS 360
+                            'value': 24.90,
                             'currency': 'BRL',
                             'items': [{
                                 'item_id': 'manual_aps_360',
